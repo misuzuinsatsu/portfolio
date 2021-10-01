@@ -15,7 +15,6 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#works">Works</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#link">Link</a></li>
                     <li><a href="https://kirei-insatsu.com/contactus/" target="_blank">Contact</a></li>
                     <li>
@@ -27,17 +26,42 @@
                 </ul>
             </nav>
         </header>
+        <input type="checkbox" class="check" name="check">
+        <div class = "s-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class = "s-close">
+            <i class="fa fa-times"></i>
+        </div>
+        <div class="s-navi">
+            <h1>Portfolio</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#link">Link</a></li>
+                <li><a href="https://kirei-insatsu.com/contactus/" target="_blank">Contact</a></li>
+                <div class="sns">
+                    <li>
+                        <a href="https://twitter.com/misuzu_printing" target="_blank"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/misuzu.printing" target="_blank"><span class="fa fa-facebook"></span></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
 
         <main>
             <div id="mainvisual">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="./img/mainvisual-sp.jpg">
+                    <source media="(max-width: 720px)" srcset="./img/main-s.jpg">
                     <img src="./img/banner05.jpg" alt="mainvisual">
                 </picture>
             </div>
 
             <section id="about" class="wrapper">
                 <h2 class="sec-title">About</h2>
+
                 <ul>
                     <li>三鈴印刷　システム開発課</li>
                     <li>三重県鈴鹿市住吉町6786-17</li>
@@ -64,13 +88,30 @@
             <section id="schedule" class="wrapper">
                 <h2 class="sec-title">Schedule</h2>
                 <dl>
+                    <dt>2021.09.29</dt>
+                    <dd>ProgateにてWeb開発パス(Node.js)修了</dd>
                     <dt>2021.09.28</dt>
-                    <dd>ポートフォリオサイト作成</dd>
+                    <dd>ポートフォリオサイト（当サイト）作成開始</dd>
                     <dt>2021.09.16</dt>
                     <dd>テストページ作成(HTML/CSS)</dd>
                     <dt>2021.09.15</dt>
-                    <dd>ProgateでHTML/CSSの勉強開始</dd>
+                    <dd>ProgateでHTML/CSSの学習開始</dd>
                 </dl>
+            </section>
+
+            <section id="skills" class="wrapper">
+                <h2 class="sec-title">Skills</h2>
+                <figure>
+                    <img src="img/syosyo.png">
+                    <figcaption>ProgateのWeb開発パス(Node.js)修了証書</figcaption>
+                </figure>
+                </div>
+                <ul>
+                    <li><img src="img/html.png" alt="HTML5"></li>
+                    <li><img src="img/css.png" alt="CSS3"></li>
+                    <li><img src="img/js.png" alt="JavaScript"></li>
+                </ul>
+
             </section>
 
             <section id="link" class="wrapper">
@@ -82,6 +123,10 @@
                     <dd><a href="https://kirei-insatsu.com/privacymark/">https://kirei-insatsu.com/privacymark/</a></dd>
                 </dl>
             </section>
+
+            <div class="bottom">
+                <a href="#header"><img src="img/logo.png"></a>
+            </div>
 
 
         </main>

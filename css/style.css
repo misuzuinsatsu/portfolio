@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 html {
   font-size: 100%;
 }
@@ -38,6 +40,16 @@ li {
   text-align: center;
   margin-bottom: 65px;
 }
+
+.wrapper#link {
+  margin-bottom:50px;
+}
+
+.bottom img {
+  padding:0;
+  display: block;
+  margin:50px auto;
+}
 /*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
@@ -46,7 +58,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items:center;
-  height:270px;
+  height:200px;
   margin: 0 auto;
   padding: 0 4%;
 }
@@ -68,6 +80,51 @@ li {
 #header li img.icon {
   width: 20px;
 }
+
+
+.s-menu, .s-navi {
+  display:none;
+}
+/*スマホ用メニュー-------------*/
+.check {
+  position:fixed;
+  width:60px;
+  height:60px;
+  right:4px;
+  top:2px;
+  z-index:20;
+  opacity:1;
+  cursor:pointer;
+  display:none;
+}
+.s-menu {
+  position:fixed;
+  font-size:3rem;
+  right:7px;
+  top:2px;
+}
+.s-close {
+  position:fixed;
+  font-size:3rem;
+  right:7px;
+  top:2px;
+  color:white;
+  display:none;
+}
+
+.s-navi ul {
+  padding-left:0;
+  border-top:solid 1px white;
+}
+.s-navi li {
+  border-bottom:solid 1px white;
+  padding:5px 0 5px 10px;
+}
+.s-navi a {
+  color:white;
+}
+
+
 
 /*-------------------------------------------
 Mainvisual
@@ -105,9 +162,10 @@ Works
   padding-left:0;
 }
 #works li {
-  width:31%;
+  width:33%;
   margin-bottom:23px;
 }
+
 /*-------------------------------------------
 Schedule
 -------------------------------------------*/
@@ -130,6 +188,32 @@ Schedule
   padding:15px 0;
   margin:0;
 }
+
+  /*-------------------------------------------
+  Skills
+  -------------------------------------------*/
+  #skills figure {
+    display:block;
+    width:60%;
+    margin:auto;
+  }
+  #skills figcaption {
+    text-align:center;
+  }
+
+  #skills ul {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+    padding-left:0;
+  }
+
+  #skills ul li {
+    width:33%;
+    margin:20px auto;
+  }
+
 /*-------------------------------------------
 Link
 -------------------------------------------*/
@@ -165,12 +249,12 @@ Link
 /*-------------------------------------------
 SP
 -------------------------------------------*/
-@media screen and (max-width:600px) {
+@media screen and (max-width:720px) {
   .wrapper {
     margin-bottom: 70px;
   }
   .site-title {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .sec-title {
     margin-bottom:40px;
@@ -178,18 +262,66 @@ SP
  /*-------------------------------------------
   ヘッダー
   -------------------------------------------*/
+  .check {
+    display:inline-block;
+    opacity:0;
+  }
   #header {
+    position:fixed;
+    background-color:rgba(255,255,255,0.9);
+    width:100%;
     max-width: 100%;
-    height: auto;
-    flex-direction: column;
+    height:65px;
+    padding-bottom:10px;
+    text-align:center;
   }
-  #header li {
-    font-size:0.8em;
-    margin-left:20px;
+
+
+
+  nav {
+    display:none;
   }
-  #header li:first-child {
-    margin-left:0;
+  .s-menu {
+    display:inline-block;
   }
+
+  .s-navi {
+    display:block;
+    background-color:#333;
+    padding-top:20px;
+    padding-bottom:20px;
+    position:fixed;
+    width:100%;
+    transition:all 800ms;
+    transform:translateY(-110%);
+  }
+  .s-navi h1 {
+    color:white;
+    padding-left:5px;
+  }
+  .sns {
+    display:flex;
+    justify-content: flex-start;
+  }
+  .sns li {
+    border-bottom:none;
+    margin-right:10px;
+  }
+
+  input:checked ~ .s-menu {
+    display: none;
+    
+  }
+  input:checked ~ .s-navi {
+    
+    transform:translateY(0);
+  }
+  input:checked ~ .s-close {
+    display: inline-block;
+    z-index: 10;
+  }
+
+
   /*-------------------------------------------
   Works
   -------------------------------------------*/
@@ -197,31 +329,44 @@ SP
     width:45%;
     margin:2%;
   }
-    /*-------------------------------------------
-Schedule
-  -------------------------------------------*/
-  #schedule dl {
-  flex-direction: column;
-}
-#schedule dt {
-  width: 100%;
-  border-bottom:none;
-  padding-bottom:0;
-}
-#schedule dd {
-  width:100%;
-  padding-top:0;
-}
+
   /*-------------------------------------------
-  Contact
+  Skills
   -------------------------------------------*/
-  #contact dl {
+  #skills ul li {
+    width:60%;
+    margin:0 auto;
+  }
+
+  /*-------------------------------------------
+  Schedule
+    -------------------------------------------*/
+  #schedule dl {
     flex-direction: column;
   }
-  #contact dt {
+  #schedule dt {
     width: 100%;
+    border-bottom:none;
+    padding-bottom:0;
   }
-  #contact dd {
+  #schedule dd {
+    width:100%;
+    padding-top:0;
+  }
+  /*-------------------------------------------
+  Link
+  -------------------------------------------*/
+  #link dl {
+    flex-direction: column;
+  }
+  #link dt {
     width: 100%;
+    border-bottom:none;
+    padding-bottom:0;
   }
+  #link dd {
+    width:100%;
+    padding-top:0;
+  }
+
 }
